@@ -1,0 +1,90 @@
+/* body
+{
+    padding:0;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+} */
+.container3
+{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    /* height: 100vh; */
+}
+.movie-name
+{
+    /* height: 10%; */
+    color: white;
+    padding: 20px;
+
+    background-color: rgb(49, 49, 49);
+}
+.genre
+{
+    display: flex;
+
+}
+.sub-genre
+{
+    margin: 10px;
+
+}
+.dates{
+    display: flex;
+    padding: 20px;
+
+    justify-content: space-between;
+}
+.d1{
+    display: flex;
+}
+.d1 a
+{
+    text-decoration: none;
+}
+.b1{
+    width: 45px;
+    background-color: red;
+    color: white;
+font-weight: 700;
+    margin: 5px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+
+}
+.d2{
+    margin: auto 0;
+    padding: 10px;
+}
+.fast-filling{
+    padding: 20px;
+}
+.fast-filling div{
+    width: 10px;
+    height: 10px ;
+    border-radius: 50%;
+    background-color: aquamarine;
+    margin-left: 10px;
+    display: inline-block;
+}
+.hall-detail{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+.hall-detail i{
+    margin: 10px;
+}
+.show-timings{
+    display: flex;
+}
+.show{
+    text-decoration: none;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    color:palevioletred;
+}
