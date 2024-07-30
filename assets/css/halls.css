@@ -1,9 +1,4 @@
-/* body
-{
-    padding:0;
-    margin:0;
-    font-family: 'Poppins', sans-serif;
-} */
+
 .container3
 {
     width: 100%;
@@ -41,9 +36,15 @@
 {
     text-decoration: none;
 }
+.d1 a:hover{
+    color: white;
+
+
+}
 .b1{
     width: 45px;
-    background-color: red;
+    background-color: rgb(219, 0, 0);
+    
     color: white;
 font-weight: 700;
     margin: 5px;
@@ -53,6 +54,11 @@ font-weight: 700;
     text-decoration: none;
 
 }
+.active{
+    background-color: rgb(211, 211, 211);
+    color: black;
+
+}
 .d2{
     margin: auto 0;
     padding: 10px;
@@ -60,13 +66,23 @@ font-weight: 700;
 .fast-filling{
     padding: 20px;
 }
+.fast-filling span
+{
+    margin-left: 5px;
+}
 .fast-filling div{
     width: 10px;
     height: 10px ;
     border-radius: 50%;
-    background-color: aquamarine;
+    background-color: green;
     margin-left: 10px;
     display: inline-block;
+}
+.fast-fill
+{
+    background-color: rgb(252, 161, 64) !important;
+
+
 }
 .hall-detail{
     display: flex;
@@ -87,4 +103,58 @@ font-weight: 700;
     margin: 20px;
     padding: 10px;
     color:palevioletred;
+}
+
+@media (max-width:767px)
+{
+    .genre
+    {
+        font-size: 12px;
+    }
+    .sub-genre
+    {
+        margin: 10px 10px 0px 0px;
+    }
+    .d1
+    {
+        font-size: 12px;
+    }
+    .dates
+    {
+        flex-direction: column;
+    }
+    .container3
+    {
+        font-size: 12px;
+    }
+    .movie-name-h1
+    {
+        font-size: 20px;
+    }
+    .fast-filling span
+    {
+        margin-left: 5px;
+    }
+    .hall-detail
+    {
+        flex-direction: column;
+    }
+    .show-timings
+    {
+        flex-wrap: wrap;
+    }
+    .name
+    {
+        justify-content: flex-start;
+    }
+    .name
+    {
+        font-size: 17px;
+        padding: 5px;
+    }
+    .name i
+    {
+        font-size: 17px;
+    }
+
 }

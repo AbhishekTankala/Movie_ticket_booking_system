@@ -1,3 +1,4 @@
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link
     rel="stylesheet"
@@ -6,6 +7,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
     />
+    <!-- <link rel="stylesheet" href="Font-Awesome/css/all.min.css"> -->
 <?php  
   $pattern="~^/Project/seats\.php~";
 if(preg_match($pattern,$_SERVER["REQUEST_URI"])){
@@ -19,7 +21,6 @@ if(preg_match($pattern,$_SERVER["REQUEST_URI"])){
    } else
    {
     ?>
-    
     
     <link
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -35,7 +36,7 @@ if(preg_match($pattern,$_SERVER["REQUEST_URI"])){
 
     <?php
    }
-
+   date_default_timezone_set('Asia/Kolkata');
 ?>
 
 

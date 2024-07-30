@@ -10,7 +10,7 @@
   display: flex;
   /* background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),url("..\\images\\dasara-posters1.jpg"); */
   background-size: cover; 
-  background-position: center; 
+  /* background-position: center;  */
   /* background-color: rgba(0, 0, 0, 0.5); */
 }
 .movie-picture
@@ -25,6 +25,7 @@
 {
     box-shadow: 10px 5px 30px;
 }
+
 #img1
 {
     object-fit: cover;
@@ -50,8 +51,13 @@
 #para1
 {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 15px;
     color: white;
+    
+}
+#para1 .fa-star{
+    color: rgb(227, 36, 103);
+    font-size: 15px;
 }
 .movie-release
 {
@@ -98,13 +104,12 @@
 }
 .movie-lang
 {
-    /* width:125px; */
-    /* height:20px; */
+    
     background-color: white;
     padding: 5px;
-    align-items: center;
-    text-align: center;
-    margin-right: 140px;
+    /* align-items: center; */
+    /* text-align: center; */
+    margin-right: 250px;
     border: 1px solid white;
 }
 .movie-details a
@@ -215,4 +220,141 @@
     border-bottom: 1px solid black;
     width: fit-content;
     padding: 10px;
+}
+.cast
+{
+    display: flex;
+    overflow-x: scroll;
+}
+.cast-member
+{
+    margin: 20px;
+    text-align: center;
+}
+.cast-member p
+{
+    margin-top: 8px;
+    font-weight: 600;
+
+}
+.cast-member img
+{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: rgb(202, 201, 201);
+    opacity: 0.5;
+    border: 1px solid grey;
+
+}
+.crew-member
+{
+    font-size:14px;
+    color:grey;
+    font-weight: 700;
+}
+
+@media (max-width:767px)
+{
+    .cast-member img
+    {
+        width: 80px;
+        height: 80px;
+
+    }
+    .card
+    {
+        height:170px;
+        width:120px;
+        margin-right:10px;
+        /* object-fit: cover; */
+        
+    }
+    #image1
+    {
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+        
+    }
+    .movie-container
+    {
+        flex-direction: column;
+        height: 95vh;
+        /* justify-content: center; */
+        align-items: center;
+
+    }
+    #img1
+    {
+        width:200px;
+        height: 300px;
+    }
+    .movie-content1
+    {
+        width: 90%;
+    }
+    .movie-release,.movie-details,.movie-runtime
+    {
+        width: 100%;
+
+    }
+    .movie-type
+    {
+        margin-right:10px;
+    }
+    #movie-button{
+        /* position: fixed;
+    bottom: 2px;
+    left: 0;
+    z-index: 5; */
+    width: 90%;
+    margin: 0 auto;
+    
+    
+    }
+    .movie-book
+    {
+        position: fixed;
+    bottom: 0px;
+    height: 60px;
+    left: 0;
+    text-align: center;
+    z-index: 5;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    
+    
+    }
+    .heading1
+    {
+
+        font-size: 20px;
+    }
+    #movie-title
+    {
+        font-size:30px;
+    }
+    .movie-runtime
+    {
+        font-size: 15px;
+    }
+    #movie-about-h
+    {
+        font-size: 20px;
+    }
+    #movie-about-content
+    {
+        font-size: 15px;
+    }
+    /* .movie-book
+    {
+        background-color: blue;
+        height: 100px;
+    } */
+    
+
+
 }

@@ -1,19 +1,28 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>bookurshow</title>
+    <!-- <link rel="stylesheet" href="bootstrap-main/dist/css/bootstrap.min.css"> -->
+     <!-- <link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    rel="stylesheet"
+    /> -->
+
     <?php
     include "links.php";
 
     ?>
   </head>
   <body>
+    
     <?php
     include "header.php";
     ?>
+
+
     <section id="carousel" class="carousel">
       <div class="container mt-5">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -26,24 +35,28 @@
 
           <div class="carousel-inner">
             <div class="carousel-item active">
+              <a href="movie.php?mid=7&lid=2">
               <img
-                src="assets/images/boyapati-rapo-posters1.jpg"
+                src="assets/images/hanuman_title.jpg"
                 alt="Image 1"
                 class="boot-image"
               />
+              </a>
               <div class="carousel-caption">
-                <h3>Skanda</h3>
+                <h3>Hanuman</h3>
               </div>
             </div>
 
             <div class="carousel-item">
+            <a href="movie.php?mid=6&lid=2">
               <img
-                src="assets/images/shyam-singha-roy-posters1.jpg"
+                src="assets/images/eagle_title.jpg"
                 alt="Image 2"
                 class="boot-image"
               />
+            </a>
               <div class="carousel-caption">
-                <h3>Shyam singa roy</h3>
+                <h3>Eagle</h3>
               </div>
             </div>
             <!-- <div class="carousel-item">
@@ -57,13 +70,15 @@
               </div>
             </div> -->
             <div class="carousel-item">
+            <a href="movie.php?mid=2&lid=1">
               <img
-                src="assets/images/gunturkaaram-posters19.jpg"
-                alt="Image 4"
+                src="assets/images/salaar_title_2.jpg"
+                alt="Image 3"
                 class="boot-image"
               />
+            </a>
               <div class="carousel-caption">
-                <h3>Guntur Kaaram</h3>
+                <h3>Salaar</h3>
               </div>
             </div>
           </div>
@@ -80,6 +95,7 @@
 
       <!-- Include Bootstrap JS scripts -->
     </section>
+    <!-- <script src="assets/js/mobile_script.js"></script> -->
     <?php 
     include "movie_list.php";
     include "footer.php";

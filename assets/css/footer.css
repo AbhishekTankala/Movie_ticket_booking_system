@@ -7,11 +7,16 @@
 }
 .contact
 {
+    
     background-color: rgb(43, 43, 44);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 50px;
+}
+button:focus{
+    border: none !important;
+    outline: none !important;
 }
 .contact1
 {
@@ -32,6 +37,10 @@
 .c1
 {
     text-align: center;
+}
+.c1 i 
+{
+    margin-bottom: 7px;
 }
 .c1 p
 {
@@ -79,4 +88,38 @@
 {
     text-align: center;
     padding: 40px;
+}
+
+@media (max-width:767px)
+{
+    .service
+    {
+        padding: 0;
+        /* text-align: center; */
+        margin: 12px;
+        
+    }
+    .c1 i
+    {
+        font-size: 20px;
+
+    }
+    .c1 p
+    {
+        font-size: 13px;
+    }
+    .contact1
+    {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .icons
+    {
+        width:50%;
+        justify-content: space-between;
+    }
+    .icons i 
+    {
+        font-size: 18px;
+    }
 }

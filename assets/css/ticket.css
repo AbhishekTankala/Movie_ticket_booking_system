@@ -1,12 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 body
 {
     /* width: 100%; */
     box-sizing: border-box;
     position: relative;
+    font-family: 'Poppins', sans-serif;
+
     height: 100vh;
     background-color: rgb(227, 227, 227);
     padding: 0;
+
     margin: 0;
+}
+.booking
+{
+  color: red;
+    margin-bottom: 15px;
+}
+.movie-name p
+{
+    margin:5px 0 0 0;
+
+}
+.movie-ticket-details
+{
+    
+    font-size: 20px;
+}
+.tic-image1
+{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+.t1
+{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color:rgb(70, 70, 70);
+}
+.ticket-image
+{
+    /* width: 120px; */
+    height: 150px;
+    /* margin-right: 30px; */
+}
+.img-col
+{
+    display: flex;
+    flex-direction: column;
 }
 .icon-movie
 {
@@ -30,23 +74,30 @@ body
 .ticket-summary
 {
     width:30%;
-    height:50vh;
+    height:65vh;
     background-color: white;
     box-shadow: 0px 1px 4px grey;
 
     margin: 0 auto;
-    padding: 10px;
+    padding: 10px 20px 10px 10px;
     margin-top: 10px;
+    margin-bottom: 50px;
+    /* padding-right: 10px; */
 }
-.booking
+.order-date
 {
-    color: red;
+    font-weight: 700;
 }
 .price1
 {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
+    margin: 0;
+}
+.price1 p
+{
+    margin: 5px;
 }
 
 .download-ticket
@@ -85,4 +136,29 @@ body
     align-items: center;
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width:767px)
+{
+    .ticket-summary
+    {
+        margin-top: 40px;
+        width:70%;
+        padding:20px;
+        height: 50vh;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .terms
+    {
+        display: none;
+    }
+    .movie-ticket-details
+    {
+        font-size: 15px;
+    }
+    .price1
+    {
+        font-size: 14px;
+    }
 }

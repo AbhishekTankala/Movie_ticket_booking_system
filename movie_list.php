@@ -9,7 +9,7 @@
             $lid=@$_GET["lid"];
             if(!$lid)
             {
-               $lid="2";
+               $lid="1";
             }
             $stmt="select m.* from shows s inner join Halls h on h.Hall_id = s.Hall_id inner join movies m on m.movie_id = s.movie_id where location_id=$lid;";
             $result=mysqli_query($conn,$stmt);
@@ -17,7 +17,7 @@
             while($row=mysqli_fetch_assoc($result))
             {
                 ?>
-    <a href="movie.php?mid=<?php echo $row["movie_id"];?>&lid=<?php echo $lid ?>"><div class="card"><h2><img src="assets/images/<?php echo $row["movie_poster"];?>" alt="" id="image1"></h2></div></a>
+    <a href="movie.php?mid=<?php echo $row["movie_id"];?>&lid=<?php echo $lid ?>"><div class="card"><img src="assets/images/<?php echo $row["movie_poster"];?>" alt="" id="image1"></div></a>
                 <?php
             }
             mysqli_close($conn);

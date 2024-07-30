@@ -47,6 +47,7 @@ body
     cursor:pointer;
     
 }
+
 .nav-toggle
 {
     color:black;
@@ -66,7 +67,7 @@ body
     width:100%;
     height:100vh;
     background-color: rgb(255, 255, 255);
-    position: absolute;
+    position: fixed;
     top: 0;
     display: none;
     /* display: none; */
@@ -78,34 +79,38 @@ body
    padding:20px;
    display: flex;
    align-items: center;
+   position: relative;
    justify-content: space-between;
    background-color: rgb(239, 239, 239);
 }
 .movie-content i
 {
     color: rgb(223, 9, 102);
-
+    font-size: 10px;
 }
 #search-bar
 {
-    width:50%;
+    width:700px;
     padding: 10px;
     border: none;
     outline: none;
+    
 }
-.search-window1 i
+
+ i
 {
     font-size: 25px;
     cursor: pointer;
 
 }
-.movie-name
+.movie-name-searchbar
 {
     font-size:12px;
 }
-.movie-name span
+.movie-name-searchbar span
 {
     margin:5px;
+    font-size: 8px;
 }
 .movies
 {
@@ -139,6 +144,11 @@ body
     margin-top:20px;
     
 }
+.movie-content a
+{
+    text-decoration: none;
+    color:black;
+}
 .movie-content p
 {
    break-inside: avoid-column;
@@ -150,7 +160,7 @@ body
     border-radius: 10px;
     padding: 3px 15px;
     font-size: 10px;
-    width: 50px;
+    /* width: 50px; */
     
 }
 .filter1 input{
@@ -200,6 +210,7 @@ body
 {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 
 }
 #city-names
@@ -226,6 +237,10 @@ body
 .carousel-item img
 {
     width:100%;
+    /* background-size: cover; */
+    /* background-position: center; */
+    object-fit: cover;
+    object-position: center;
 }
 .search-window,.location-container
 {
@@ -242,10 +257,10 @@ body
 }
 .signin
 {
-    width:40%;
+    width:30%;
     background-color: white;
     margin:0 auto;
-    height: 400px;
+    height: 70vh;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -256,6 +271,8 @@ body
 {
     display: flex;
     flex-direction: column;
+    
+    text-align: center;
 }
 .signin-btns button
 {
@@ -264,16 +281,41 @@ body
     color: rgb(80, 80, 80);
     border-radius: 8px;
     padding: 5px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+.signin-policy
+{
+    font-size: 12px;
+}
+.phone-div
+{
+    text-align: center;
+}
+.signin-phone input
+{
+    font-size: 14px;
+    text-align: center;
 }
 .signin-btns button i
 {
-    margin: 6px;
+    font-size: 16px;
+    /* margin: 6px; */
+    position: absolute;
+    top: 50%;
+    left:5%;
+    transform: translateY(-50%);
 }
+
+.location-window i 
+{
+    display: none;
+}
+
 .signin-btns button{
     margin-bottom: 20px;
+    position: relative;
 }
 #signin-head
 {
@@ -367,6 +409,11 @@ body
     justify-content: space-between;
 
 }
+#close-sidebar
+{
+    margin-top: 10px;
+    font-size: 24px;
+}
 #close-toggle
 {
     font-size: 20px;
@@ -375,7 +422,7 @@ body
 {
     padding: 10px;
 }
-.sidebar-login button
+.sidebar-login button,.side-logout
 {
     margin-left: 20px;
     margin-top: 5px;
@@ -384,6 +431,19 @@ body
     background-color: white;
     border:2px solid rgb(255, 22, 104);
     /* border-color: rgb(233, 11, 11); */
+}
+.side-logout
+{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding:0px 10px;
+}
+.side-logout:hover
+{
+    text-decoration: none;
+    color: red;
+
 }
 #login-icon
 {
@@ -394,6 +454,15 @@ body
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     /* margin-bottom: 10px; */
     border-radius: 10px;
+    display: block;
+    text-decoration: none;
+    color:black;
+    padding: 10px;
+}
+.order:hover
+{
+    text-decoration: none;
+    color:black;
 }
 #order-icon
 {
@@ -469,8 +538,269 @@ body
     height:300px;
     object-fit: cover;
     object-position: top;
+    border-radius: 10px;
     /* object-fit: fill; */
     /* background-position: bottom; */
     /* background-size: cover; */
 
+}
+
+.search-suggestion{
+    left:20px;
+    top:60px;
+    background-color: rgb(255, 255, 255);
+    width:700px;
+    height: fit-content;
+    max-height: 80vh;
+    /* overflow-y:scroll ; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.suggestion{
+    padding: 10px;
+    border: 1px solid rgb(216, 216, 216);
+    border-width: 0 0 1px 0;
+    width: 100%;
+    height: 70px;
+    font-size: 5px;
+}
+.suggestion a{
+    text-decoration: none;
+    color: rgb(87, 87, 87);
+}
+.suggestion p {
+    margin: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.suggestion i{
+    margin: 15px;
+}
+.mobile-location
+{
+    display: none;
+}
+.mobile-footer
+{
+    display: none;
+}
+.signin-btns .email-btn
+{
+    background-color:rgb(255, 221, 240);
+    /* color:white; */
+    
+}
+
+@media (max-width:767px)
+{
+    .nav1
+    {
+        /* display: none; */
+        width: 100%;
+        position: fixed;
+        z-index: 6;
+        top:0;
+    }
+    body
+    {
+        padding-top: 65px !important;
+        padding-bottom: 1000px !important;
+    }
+   
+    .boot-image
+    {
+        height:200px;
+    }
+    .logo1 img 
+    {
+        width: 140px;
+    }
+    #search,.nav-location,#signin-btn,.nav-search
+    {
+        display: none;
+    }
+    .nav-search
+    {
+        width: 10%;
+    }
+    .nav-toggle
+    {
+        width:40%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mobile-location
+    {
+        /* display: block; */
+        display: flex;
+        font-size: 12px;
+        flex-direction: column;
+        text-align: center;
+        color:rgb(251, 1, 1);
+        /* justify-content: center; */
+        /* align-items: flex-end; */
+    }
+    .mobile-location i 
+    {
+        /* margin-left: 5px; */
+        font-size: 16px;
+        color:black;
+    }
+    .mobile-footer
+    {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+       align-items: center;
+    height:50px;
+    background-color:white ; /*#1f2646 #d5abe1 #5037c6 #efcfeb #d5abe1 */
+    padding:0 30px 0 30px;
+    bottom: 0;
+    position: fixed;
+
+    }
+    .mobile-icon
+    {
+        font-size: 12px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-icon i 
+    {
+        font-size: 17px;
+    }
+    .mobile-icon a 
+    {
+        text-decoration: none;
+        color:black;
+    }
+    .signin
+    {
+        top:0;
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        padding: 60px 30px;
+        height: 100vh;
+        justify-content: flex-start;
+        /* margin-top: 20px; */
+    }
+    .phone-button
+    {
+        margin-top: 50px;
+    }
+    .signin-phone input
+    {
+        width: 70%;
+        /* margin-top: 50px; */
+
+    }
+    .signin-policy
+    {
+        margin-top: 20px;
+    }
+    .signin-btns
+    {
+        margin-top: 10px;
+    }
+    #location-container
+    {
+        /* position: relative; */
+        top:0;
+    }
+    .location-window
+    {
+        width: 100%;
+        position: absolute;
+        top:0;
+        text-align: left;
+        border-radius: 0;
+    }
+    #city-names
+    {
+        text-align: center;
+        flex-direction: column;
+
+    }
+    .cities
+    {
+        flex-direction: column;
+        /* text-align: left; */
+    }
+    .city-heading
+    {
+        font-weight: 700;
+        font-size: 16px;
+        color:black;
+        border: 1px solid rgb(108, 108, 108);
+        border-width: 0 0 1px 0;
+        width: fit-content;
+    }
+    .location-window input 
+    {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .location-window i 
+    {
+        display:block;
+        position: absolute;
+        right:30px;
+        font-size: 25px;
+    }
+    #search-bar
+    {
+        width:250px;
+        font-size: 12px;
+    }
+    .movies
+    {
+        padding: 10px;
+    }
+    .btn1
+    {
+        font-size: 12px;
+    }
+   .movie-content
+   {
+      padding: 0px 20px;
+      margin-top: 20px;
+      text-align: center;
+   }
+   .movie-content p 
+   {
+      text-align: center;
+      font-size: 13px;
+   }
+   .movie-content h6
+   {
+       font-weight: 700;
+   }
+   .movie-btn
+   {
+    flex-direction: column;
+   }
+   .search-suggestion
+   {
+      width:250px;
+   }
+   .suggestion p 
+   {
+     font-size: 12px;
+   }
+   .suggestion i 
+   {
+      font-size: 14px;
+   }
+   .suggestion
+   {
+    height: 60px;
+    /* padding: 5px; */
+   }
 }
